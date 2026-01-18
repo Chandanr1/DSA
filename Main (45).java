@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+    static void print(int arr[]){
+        for(int ele : arr){
+            System.out.print(ele+" ");
+        }
+    }
+    
+    static void zeros(int arr[]){
+        int arr1[]=new int[arr.length];
+        int count=0;
+        int b=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=0){
+                arr1[b]=arr[i];
+                b++;
+            }
+            else count++;
+        }
+        for(int i=b;i<arr1.length;i++){
+            arr1[i]=0;
+        }
+        print(arr1);
+    }
+    
+    static void zeroes(int arr[]){
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=0;j<arr.length-1-i;j++){
+            if(arr[j]==0){
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            }
+        }
+        print(arr);
+    }
+    
+	public static void main(String[] args) {
+		int arr[]={1,2,3,0,-2,0,4,0,1};
+		zeros(arr);
+	}
+}
