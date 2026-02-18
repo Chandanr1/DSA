@@ -44,7 +44,7 @@ class DLL{
         size++;
     }
     void deleteAtHead(){
-       
+       if(size==1) head=tail=null;
         if(head==null) {
             System.out.print("list is empty");
         }
