@@ -60,8 +60,8 @@ class DLL{
             System.out.print("list is empty");
         }
         else{
-            temp=temp.prev;
-            temp.next=null;
+            tail=tail.prev;
+            tail.next=null;
         }
         size--;
     }
