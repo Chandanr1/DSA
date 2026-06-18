@@ -9,10 +9,11 @@ import java.util.Queue;
 import java.util.*;
 public class BasicOfQueues
 {
-	public static void main(String[] args) {
-		Queue<Integer> q = new LinkedList<>();
-		q.add(10) ; q.add(20) ; q.add(30); q.add(40); q.add(50);
-		int n=q.size();
+	public static void display(Queue<Integer> q){
+        System.out.println(q);
+    }
+	public static void peekAtIndex(Queue<Integer> q , int idx){
+        int n=q.size();
 		int peekAt=3;
 		int clone=peekAt;
 		while(peekAt>0){
@@ -26,7 +27,12 @@ public class BasicOfQueues
 	        q.add(q.remove());
 	        c--;
 	    }
-		System.out.println();
+    }
+	public static void main(String[] args) {
+		Queue<Integer> q = new LinkedList<>();
+		q.add(10) ; q.add(20) ; q.add(30); q.add(40); q.add(50);
+		display(q);
+		peekAtIndex(q,3);
 		System.out.print(q);
 	}
 }
