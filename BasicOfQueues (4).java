@@ -9,9 +9,10 @@ import java.util.Queue;
 import java.util.*;
 public class BasicOfQueues
 {
-	public static void main(String[] args) {
-		Queue<Integer> q = new LinkedList<>();
-		q.add(10) ; q.add(20) ; q.add(30); q.add(40); q.add(50);
+	public static void display(Queue<Integer> q){
+        System.out.println(q);
+    }
+	public static void removeAtIndex(Queue<Integer> q , int idx){
 		int n=q.size();
 		int removeAt=3;
 		int clone=removeAt;
@@ -26,7 +27,12 @@ public class BasicOfQueues
 	        q.add(q.remove());
 	        c--;
 	    }
-		System.out.println();
-		System.out.print(q);
+	}
+	public static void main(String[] args) {
+		Queue<Integer> q = new LinkedList<>();
+		q.add(10) ; q.add(20) ; q.add(30); q.add(40); q.add(50);
+		display(q);
+		removeAtIndex(q,3);
+		
 	}
 }
