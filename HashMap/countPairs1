@@ -1,0 +1,19 @@
+class Solution {
+    int countPairs(int arr[], int target) {
+        // code here
+        int count=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int ele:arr){
+            int compliment=target-ele;
+            if(map.containsKey(compliment)){
+                count+=map.get(compliment);
+            }
+            if(map.containsKey(ele)){
+                map.put(ele,map.get(ele)+1);
+            }
+            else map.put(ele,1);
+        }
+       
+       return count;
+    }
+}
