@@ -1,0 +1,10 @@
+class Solution {
+    public int helper(Node root){
+        if(root==null) return 0;
+        return 1+ Math.max(helper(root.left),helper(root.right));
+    }
+    public int height(Node root) {
+        // code here
+        return Math.max(helper(root.left),helper(root.right));
+    }
+}
